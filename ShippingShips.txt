@@ -1,0 +1,37 @@
+title Shipping
+
+participant main
+participant dock
+
+participant hauler
+participant cargo
+
+participant database
+main->dock:I need the function for generating dock HTML
+main<--dock:here is the function
+main->hauler: I need the function for generating haulerHTML
+main<--hauler:here is the function
+main->cargo: I need the function for generating cargo HTML
+main<--cargo:here is the function
+
+note over main:invoke dock function
+dock->database:I need all of the docks objects
+dock<--database: here is a copy of them
+
+dock->dock:loop converting each object to HTML
+dock-->main: here is the generated HTML
+
+note over main:invoke hauler function
+hauler->database:I need all of the haulerShips objects
+hauler<--database:here is a copy of them
+
+hauler->hauler:loop converting each object to HTML
+hauler-->main: here is the generated HTML
+note over main:invoke cargoHTML function
+cargo->database: i need all of the cargoship objects
+cargo<--database:here is a copy of them
+
+cargo->cargo:loop converting each object to a <li>
+cargo-->main: here is the generated HTML
+
+note over main: Update the innerHTML of the <main> element in the DOM.
