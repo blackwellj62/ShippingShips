@@ -14,10 +14,12 @@ ${dockList()}
 <section class="detail--column list details__haulers">
 <h2>Hauler Ships</h2>
 ${haulerList()}
+<img id="image" src="https://www.picclickimg.com/uncAAOSwRUJm7dV5/Vintage-1977-Empire-Tuggsy-Tug-Boat-I-Toot-I.webp" alt="tugboat"
 </section>
-<section class="detail--column list details__cargo">
+<section class="cargo">
 <h2>Cargo Ships</h2>
 ${cargoList()}
+<img id="image" src="https://stfc.space/assets/103-CmWrMQph.png" alt="The Enterprise">
 </section>
 </article>
 `

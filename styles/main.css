@@ -32,5 +32,11 @@ li {
     border: 2px solid black;
     background-color: blanchedalmond;
     color:black;
-    width: 500px;
+    width: 45%;
+}
+
+#image {
+    padding: 0 500px;
+    max-width: 256px;
+    max-height: 1256px;
 }
